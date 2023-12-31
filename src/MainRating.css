@@ -1,0 +1,98 @@
+.title-bold{
+    font-weight: bold;
+    text-align: center;
+}
+.rating-wrap{
+    max-width: 636px;
+    margin-top: 3rem;
+}
+.rating-wrap p{
+    text-align: center;
+}
+
+.pd-2rem{
+    padding-top: 2rem;
+}
+
+.salon-description{
+    display: flex;
+    margin-left: 0.5rem;
+    flex-direction: column;
+}
+
+.container-author{
+    display: flex;
+    flex-direction: row;
+}
+.author-avatar{
+    width: 41px;
+    height: 41px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+    .author-name{
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .job-author{
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+.author-description-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+    .author-description{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        
+    }
+
+.px-rem{
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.rating-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.card-rating__container{
+    padding: 1.5rem;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.04);
+    width: 414px;
+    height: 273px;
+    border-radius: 5px;
+}
+.card-rating__container--header{
+    display: flex;
+    align-items: center;
+}
+    .salon-avatar{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+    }
+.card-rating__title{
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+}
+.rate-image{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.card-text-favorites{
+    padding: 1rem 0 1rem 0;
+    font-style: italic;
+    color: #777;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}

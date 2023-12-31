@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>README</title>
+<style type="text/css">
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #C0C0C0;
+}
+
+th{
+    border: 1px solid #C0C0C0;
+    padding: 0.5rem;
+    background-color: #04AA6D;
+    color: white;
+}
+
+td{
+    border: 1px solid #C0C0C0;
+    padding: 0.5rem;
+    
+}
+</style>
+</head>
+<body>
+<h1>Requirement:</h1>
+<ul>
+  <li>PHP 8.1,</li>
+  <li>redis,</li>
+  <li>php pdo</li>
+  <li>apache rewrite</li>
+  <li>x-debug <a href="https://php.tutorials24x7.com/blog/how-to-debug-php-using-xdebug-and-netbeans-on-ubuntu">https://php.tutorials24x7.com/blog/how-to-debug-php-using-xdebug-and-netbeans-on-ubuntu</a></li>
+</ul><h1>API list:</h1><h3>PUBLIC: {GET} light/api/public?s={Search Type}</h3>
+<ul>
+  <li>Sample: public?s=&lt;&lsquo;TopRated&rsquo;, &lsquo;Carouse&rsquo;&gt;&amp;p=1&amp;z=50</li>
+  <li>Params: Header Bearer NONE</li>
+</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Search Type </th>
+      <th>Extra Params </th>
+      <th>Note </th>
+      <th>Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carouse</td>
+      <td>p, z</td>
+      <td>List of Carouse, displaying in the home page</td>
+      <td>{API}/public?s=Carouse</td>
+    </tr>
+    <tr>
+      <td>TopRated</td>
+      <td>p, z</td>
+      <td>List of toprated salons </td>
+      <td>{API}/public?s=TopRated</td>
+    </tr>
+    <tr>
+      <td>NearBy</td>
+      <td>p, z</td>
+      <td>Get near by location </td>
+      <td>{API}/public?s=NearBy</td>
+    </tr>
+    <tr>
+      <td>GetSalons</td>
+      <td>name, street, city, state, zip, country, p, z </td>
+      <td>Get all salons </td>
+      <td>{API}/public?s=GetSalons</td>
+    </tr>
+    <tr>
+      <td>GetSalonReviews</td>
+      <td>salonid, p, z </td>
+      <td>Get all salons reviews </td>
+      <td>{API}/public?s=GetSalonReviews</td>
+    </tr>
+  </tbody>
+</table><h3>PUBLIC: {GET} light/api/public?c={CMD}</h3>
+<ul>
+  <li>Sample: public?s=&lt;&lsquo;TopRated&rsquo;, &lsquo;Carouse&rsquo;&gt;</li>
+  <li>Params: Header Bearer NONE</li>
+</ul>
+<table>
+  <thead>
+    <tr>
+      <th>CMD </th>
+      <th>Extra Params </th>
+      <th>Note </th>
+      <th>Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ActiveUser</td>
+      <td>userid, activecode</td>
+      <td>Active user account </td>
+      <td>{API}/public?s=ActiveUser&amp;userid={id}&amp;activecode={code}</td>
+    </tr>
+  </tbody>
+</table><h3>Login: {POST} light/api/login</h3>
+<ul>
+  <li>Params:</li>
+</ul>
+<pre><code>    &#39;form_params&#39; =&gt; [
+        &#39;email&#39; =&gt; $email,
+        &#39;password&#39; =&gt;  $pass,
+    ]
+</code></pre>
+<ul>
+  <li>Return: JWT Token = {&lsquo;user&rsquo;:&lsquo;user02&rsquo;,&lsquo;id&rsquo;:&lsquo;1ab953ad-1d11-4456-9572-3016a21585aa&rsquo;,&lsquo;role&rsquo;:&lsquo;user&rsquo;,&lsquo;dbid&rsquo;:&lsquo;b336fe1a&rsquo;,&lsquo;exp&rsquo;:1687923711}</li>
+</ul><h3>Refresh Token: {POST} light/api/user/refresh-token</h3>
+<ul>
+  <li>Params: Header Bearer {$TOKEN}</li>
+  <li>Return: JWT Token = {&lsquo;user&rsquo;:&lsquo;user02&rsquo;,&lsquo;id&rsquo;:&lsquo;1ab953ad-1d11-4456-9572-3016a21585aa&rsquo;,&lsquo;role&rsquo;:&lsquo;user&rsquo;,&lsquo;dbid&rsquo;:&lsquo;b336fe1a&rsquo;,&lsquo;exp&rsquo;:1687923711}</li>
+</ul><h3>Search Salon: {GET} light/api/salon/search?s=params</h3>
+<ul>
+  <li>Sample: s=&lt;&lsquo;NearBy&rsquo;, &lsquo;GetById&rsquo;, &lsquo;TopRated&rsquo;, &lsquo;ServiceById&rsquo;, &lsquo;CategoryById&rsquo;&gt;&amp;id={salonid}&amp;p=1&amp;z=50</li>
+  <li>Params: Header Bearer {$TOKEN}</li>
+</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Search Type </th>
+      <th>Extra Params (p:page number, z: page size) </th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NearBy </td>
+      <td>long, lat, met, p, z </td>
+      <td>met: default 100met</td>
+    </tr>
+    <tr>
+      <td>GetById </td>
+      <td>id (salon ID) </td>
+    </tr>
+    <tr>
+      <td>TopRated </td>
+      <td>o (order by), p, z </td>
+    </tr>
+    <tr>
+      <td>ServiceById</td>
+      <td>id </td>
+      <td>Return all services of a salon Id</td>
+    </tr>
+    <tr>
+      <td>CategoryById</td>
+      <td>id </td>
+      <td>Return all categories of a salon Id</td>
+    </tr>
+    <tr>
+      <td>GetUserSalonFavourite </td>
+      <td>p, z </td>
+      <td>Get user salon favourite</td>
+    </tr>
+    <tr>
+      <td>GetSalons</td>
+      <td>p, z </td>
+      <td>Get all user salons</td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+  <li>Return: Salon list or one salon</li>
+</ul><h3>Salon command {POST} light/api/salon/cmd?c={CMD name}</h3>
+<ul>
+  <li>Params: Header Bearer {$TOKEN}</li>
+</ul>
+<table>
+  <thead>
+    <tr>
+      <th>CMD name </th>
+      <th>Extra POST </th>
+      <th>Note </th>
+      <th>sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CreateSalon </td>
+      <td>json = {name, street, city, state, zip, country, latitude, longitude, pluscode, placekey} </td>
+      <td>Create a new salon for login user </td>
+      <td>cmd?c=CreateSalon</td>
+    </tr>
+    <tr>
+      <td>AddDefaultService </td>
+      <td>json = {salonid} </td>
+      <td>Create all default services and categories </td>
+      <td>cmd?c=AddDefaultService</td>
+    </tr>
+    <tr>
+      <td>CreateSalonCategory </td>
+      <td>json = {name, salonid} </td>
+      <td>Create Salon Category for login user </td>
+      <td>cmd?c=CreateSalonCategory</td>
+    </tr>
+    <tr>
+      <td>UpdateSalonCategory </td>
+      <td>json = {name, salonid, saloncateid} </td>
+      <td>Update Salon Category name for login user </td>
+      <td>cmd?c=UpdateSalonCategory</td>
+    </tr>
+    <tr>
+      <td>DeleteSalonCategory </td>
+      <td>json = {salonid, saloncateid} </td>
+      <td>Delete Salon Category and all associated Service for login user </td>
+      <td>cmd?c=DeleteSalonCategory</td>
+    </tr>
+    <tr>
+      <td>CreateService </td>
+      <td>json = {salonid, saloncatid, sname, sdesc, minutes, turn, sprice, imagejson} </td>
+      <td>Create Salon Service for login user </td>
+      <td>cmd?c=CreateService</td>
+    </tr>
+    <tr>
+      <td>UpdateService </td>
+      <td>json = {salonid, saloncatid, salonserviceid, sname, sdesc, minutes, turn, sprice, imagejson} </td>
+      <td>Update Salon Service for login user </td>
+      <td>cmd?c=UpdateService</td>
+    </tr>
+    <tr>
+      <td>DeleteService </td>
+      <td>json = {salonid, saloncatid, salonserviceid} </td>
+      <td>Delete Salon Service for login user </td>
+      <td>cmd?c=DeleteService</td>
+    </tr>
+    <tr>
+      <td>SetUserSalonFarourite </td>
+      <td>json = {salonid, isfavourite} </td>
+      <td>Add or Remove user salon favourite </td>
+      <td>cmd?c=SetUserSalonFarourite</td>
+    </tr>
+    <tr>
+      <td>AddSalonReview </td>
+      <td>json = {salonid, content, star} </td>
+      <td>Add salon review </td>
+      <td>cmd?c=AddSalonReview</td>
+    </tr>
+    <tr>
+      <td>CreateSalonTechnican</td>
+      <td>json = {email, name, description, role, phonenumber, content, pwd} </td>
+      <td>Add salon technican </td>
+      <td>cmd?c=CreateSalonTechnican</td>
+    </tr>
+    <tr>
+      <td>EditSalonDetail</td>
+      <td>json = {salonid, name, street, city, state, zip, phone, email, country, website, bussinessein, description, suite} </td>
+      <td>Edit salon </td>
+      <td>cmd?c=EditSalonDetail</td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+  <li>Create Return: {&lsquo;newId&rsquo;, &lsquo;error&rsquo;}</li>
+  <li>Update/Delete Return: {&lsquo;rowCount&rsquo;, &lsquo;error&rsquo;}</li>
+</ul><h3>User {POST} light/api/{cmd}</h3>
+<table>
+  <thead>
+    <tr>
+      <th>CMD name </th>
+      <th>Type </th>
+      <th>Extra POST </th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>register </td>
+      <td>public </td>
+      <td>post_form {&lsquo;username&rsquo;, &lsquo;email&rsquo;, &lsquo;password&rsquo;, &lsquo;phone&rsquo;} </td>
+      <td>After register, send email for confirm account</td>
+    </tr>
+    <tr>
+      <td>forgotpwd </td>
+      <td>public </td>
+      <td>post_form {&lsquo;email&rsquo;} </td>
+      <td>Send email to open change pwd form</td>
+    </tr>
+    <tr>
+      <td>resetpwd </td>
+      <td>public</td>
+      <td>json = {&lsquo;userid&rsquo;, &lsquo;resetcode&rsquo;, &lsquo;password&rsquo;} </td>
+      <td>Reset password for Forgot password user</td>
+    </tr>
+    <tr>
+      <td>changepwd </td>
+      <td>protected</td>
+      <td>post_form {&lsquo;userid&rsquo;, &lsquo;newpassword&rsquo;} </td>
+      <td>Change password for log in user</td>
+    </tr>
+    <tr>
+      <td>remove </td>
+      <td>protected</td>
+      <td>post_form {&lsquo;email&rsquo;, &lsquo;password&rsquo;} </td>
+      <td>Remove user</td>
+    </tr>
+    <tr>
+      <td>profile </td>
+      <td>protected </td>
+      <td> </td>
+      <td>Get user profile</td>
+    </tr>
+  </tbody>
+</table><h1>Jenkins:</h1><p>~/jenkins-N360-Api-Light.sh </p>
+<pre><code>rsync -v -r --exclude=&#39;.git*&#39; --exclude=&#39;markdown.header&#39; --exclude=&#39;dbsql&#39; --exclude=&#39;README.md&#39; --exclude=&#39;nbproject&#39;  --exclude=&#39;config.php*&#39; --exclude=&#39;global.php*&#39; --exclude=&#39;config.php*&#39; --exclude=&#39;phpunit.xml&#39;  --exclude=&#39;src&#39;  --exclude=&#39;test&#39; --exclude=&#39;composer.json&#39;  `pwd`/* /var/www/html/light/api
+
+mv  /var/www/html/light/api/READE.html /var/www/html/light/api/README.php
+</code></pre><h1>sql-update.sh</h1>
+<pre><code>  echo UPDATE  /tmp/workspace/N360-Light-Api/dbsql/database-$1.sql
+  psql -h 127.0.0.1 -U postgres nail360api -f /tmp/workspace/N360-Light-Api/dbsql/database-$1.sql
+</code></pre><h1>.htaccess</h1>
+<pre><code>RewriteEngine On
+
+RewriteRule ^README\.php$ - [L]
+
+RewriteRule ^(inc|react)/.*$ index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]
+</code></pre><h1><a href="#nail360apilight" name="nail360apilight">nail360ApiLight</a></h1><p><a href="https://blog.martinhujer.cz/how-to-use-data-providers-in-phpunit/">https://blog.martinhujer.cz/how-to-use-data-providers-in-phpunit/</a></p><h1><a href="#sendgrid" name="sendgrid">SendGrid</a></h1>
+<ul>
+  <li>download at: <a href="https://github.com/sendgrid/sendgrid-php/releases/download/8.0.1/sendgrid-php.zip">https://github.com/sendgrid/sendgrid-php/releases/download/8.0.1/sendgrid-php.zip</a></li>
+  <li>unzip it to API/lib/sendgrid</li>
+</ul>
+</body>
+</html>

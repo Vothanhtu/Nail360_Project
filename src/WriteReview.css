@@ -1,0 +1,231 @@
+
+.review-container__header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 3rem;
+}
+.review-container__content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+/* Icon btn */
+.icon-share{
+    font-weight: 300;
+    font-size: 14px;
+    width: 13px;
+    height: 14px;
+    margin-right: 5px;
+}
+.icon-heart{
+    font-weight: 300;
+    font-size: 16px;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+.form-review-wrapper{
+    width: 670px ;
+    height: 760px;
+    background-color: #F5F5F5 ;
+    border:1px solid #CDCDCD ;
+    border-radius: 10px;
+}
+    .form-review-flex{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-review{
+        padding: 1.5rem 2rem ;
+    }
+
+    .font-title{
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .pt-1rem{
+        padding-top: 1rem;
+    }
+    .pb-1rem{
+        padding-bottom: 1rem;
+    }
+
+    .ip-addheadline{
+        border-radius: 300px;
+        width: 100%;
+        height: 50px;
+        border: 1px solid #CDCDCD;
+    }
+    .ip-writereview{
+        border-radius: 20px;
+        width: 100%;
+        height: 118px;
+        border: 1px solid #CDCDCD;
+
+
+    }
+    .ip-addtech{
+        border-radius: 20px;
+        width: 100%;
+        height: 118px;
+        border: 1px solid #CDCDCD;
+        
+    }
+
+.color-star-after{
+    color: #FFB800;
+    width: 30px;
+    height: 30px;
+}
+.color-star-before{
+    color: #CDCDCD;
+    width: 30px;
+    height: 30px;
+}
+
+/* Choose image */
+.rw-image__render{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;    
+    position: absolute;
+}
+    .rw-image__render:hover{
+        opacity: 0.8 ;
+    }
+
+.rw-close-image{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #FFF;
+    opacity: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px ;
+    font-weight: 400;
+    cursor: pointer;
+}
+.rw-image-container{
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: 2rem;
+}
+.image-upload-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.lb-image-upload{
+    margin-top: 2rem;
+}
+    .uploadPhoto{
+        background-color: #FFECEC;
+        border-radius: 16px;
+        border: 1px dashed #D3427A;
+        width: 100px;
+        height: 100px;
+        padding-top: 1.2rem;
+    }
+        .uploadPhoto p{
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .uploadPhoto-flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    .rw-fa-cloud-upload{
+        font-weight: 300;
+        width: 20px;
+        height: 20px;
+    }
+
+.btn-post-review{
+    border: 1px solid #D3427A;
+    color: #D3427A ;
+    background-color: #FFF;
+    border-radius: 300px;
+    width:180px ;
+    height: 42px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.activity-time{
+    margin: 10px 0 0 10px;
+}
+/* LIST REVIEW */
+.list-review{
+    max-width:500px ;
+    height: 759px;
+    background-color: #FFF ;
+    border:1px solid #CDCDCD ;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.review-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+.newreview-header p{
+    color: #D3427A;
+    font-weight: 700;
+    font-size: 14px;
+}
+.no-underline{
+    text-decoration: none;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+    .jc-space-between{
+        justify-content: space-between;
+    }
+    .content-header{
+        width: 100%;
+    }
+    .content-header-top{
+        height: 30px;
+        padding: 0.5rem 0 0 0.5rem;
+    }
+        .content-header-top h2{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .content-body h2{
+            font-weight: 700;
+            font-size: 16px;
+            padding-top: 0.5rem;
+        }
+        .content-body p{
+            font-weight: 400;
+            font-size: 14px;
+        }
+    .content-header-bottom{
+        padding: 0.3rem 0 0 0.5rem;
+    }
+.avt-review{
+    width: 60px;
+    height: 60px;
+}

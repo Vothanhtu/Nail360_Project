@@ -1,0 +1,246 @@
+.list-review-container--header  {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 3rem;
+}
+/* Container*/
+.list-review-container--content{
+    width: 100%;
+    height: 1316px;
+    border: 1px solid #cdcdcd;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+
+}
+.list-review-wraper{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+}
+.customer-review,.review-container{
+    display: flex;
+    flex-direction: column;
+}
+.customer-review{
+    width: 377px;
+}
+.review-container{
+    flex-grow: 1;
+    gap: 2rem;
+}
+.customer-review--rating{
+    width: 100%;
+    height: 313px;
+}
+.customer-review--location{
+    width: 100%;
+    height: 651px;
+}
+
+.customer-review--rating{
+    display: block;
+}
+
+    .rating-chart-booking{
+        width: 100%;
+        object-fit: cover;
+    }
+    .customer-review--rating h2{
+        font-weight: 700;
+        font-size: 20px;
+        color: #333;
+    }
+.review-rating{
+    display: flex;
+    flex-direction: row;
+}
+    .rating-star-booking{
+        height: 16px;
+        font-weight: 700;
+
+    }
+    .review-rating h3{
+        font-weight: 400;
+        font-size: 18px;
+        color: #333;
+    }
+.review-rating__customer--count{
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+}
+
+.customer-review--location{
+    display: flex;
+    flex-direction:column;
+    border:none;
+    border-radius: 10px;
+}
+
+.review-image h2{
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+}
+.review-image h3{
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+    float: right;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.review-image-show{
+    display: grid;
+    grid-template-columns: repeat(4,158px);
+    grid-template-rows: 162px;
+    gap: 2rem;
+}
+.top-review__header{
+    display: flex;
+    justify-content: space-between;
+}
+    .top-review__header h2{
+        font-weight: 700;
+        font-size: 20px;
+        color: #333;
+    }
+.top-review__button{
+    display: flex;
+    gap: 1rem;
+}
+.top-review__button button{
+    border: 1px solid #CDCDCD;
+    width: max-content;
+    height: 35px;
+    border-radius: 300px;
+    background-color: #FFF;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+}
+.top-review__button input{
+    border: 1px solid #CDCDCD;
+    width: 200px;
+    height: 35px;
+    border-radius: 300px;
+    background-color: #FFF;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Booking */
+.list-review{
+    margin-left: 1rem ;
+}
+.list-review-wrapper{
+    width:400px ;
+    height: 688px;
+    display: flex;
+    flex-direction:column;
+    border:none;
+    box-shadow: 0px 0px 10px 5px #d4d6d1;
+    border-radius: 10px;
+    padding:10px;
+}
+.title-booking{
+    font-weight:700 ;
+    font-size: 18px;
+}
+.map-booking{
+    width: 100%;
+    border-radius: 10px4;
+}
+.list-review__content1{
+    display: flex;
+    flex-direction:row;
+    padding-top: 10px;
+    align-items: center;
+}
+.list-review__content2{
+    display: flex;
+    flex-direction:row;
+    padding-top: 10px;
+    align-items: center;
+}
+
+ .list-review__content1 p,
+ .list-review__content2 p{
+    font-weight: 600;
+    font-size: 16px;
+    max-width: 245px;
+    margin-top: 10px;
+    width: max-content;
+ }
+
+
+ .list-review__content1 button,
+ .list-review__content2 button{
+    background-color: #333;
+    color: #FFF;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    height: 25px;
+    width: 76px;
+ }
+
+ .list-review__content2 button{
+    margin-left: 9.2rem;
+ }
+ .list-review__content1 button{
+    margin-left: 2rem;
+ }
+ .list-review__content1 img,
+ .list-review__content2 img {
+    font-weight: 300;
+    font-size: 14px;
+ }
+
+ .booking-price{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .price-title{
+    font-weight: 400;
+    font-size: 16px;
+ }
+.price{
+    font-weight: 700;
+    font-size: 20px;
+    color: #D3436F;
+}
+
+
+.booking-activity-time{
+    background-color: #f1efef;
+    border-radius: 4px;
+    padding: 5px;
+}
+.booking-website{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.booking-social{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.btn-booking-now{
+    width: 100%;
+    height: 42px;
+    background-color: #D3436F;
+    color: #FFF;
+    border-radius: 300px;
+
+}
+
+

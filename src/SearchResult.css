@@ -1,0 +1,126 @@
+.result__container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0 0 2rem 0 ;
+}
+    .result__container--flex{
+        display: flex;
+        flex-direction: row;
+    }
+.result_image{
+    width: 194px;
+    height: 194px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.result__container--activity{
+    display: flex;
+    flex-direction: row;
+}
+    .result__container--activity p{
+        margin-top: 0;
+    }
+.result__container--child{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.5rem 0 0.5rem 0;
+}
+.result__container--header{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem ;
+    align-items: center;
+}
+    .result_profile_image{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid #7777;
+    }
+    .result_salonname{
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .result_salonname--a{
+        text-decoration: none;
+        color: #333 ;
+    }
+    .result_salonname--a:hover{
+        color: #333;
+    }
+    .result_content{
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+.result__btn--book_now{
+    width: 110px;
+    height: 34px;
+    border-radius: 300px;
+    border: 1px solid #777;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #FFF;
+    color: #333;
+}
+.result__btn--book_now:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+.result_location{
+    margin: 0;
+}
+
+.result__col--left{
+    width: 700px;
+}
+.result__col--right{
+    width: 666px;
+    height: 1006px;
+}
+.containermap{
+    width: 666px;
+}
+
+
+/* Panigation */
+.panigation-container{
+    margin-top: 1rem;
+}
+.btn-panigation{
+    border: none;
+    background-color: #FFF;
+    font-weight: 800;
+    color: #333;
+}
+.number-panigations{
+    background-color: #FFF;
+    color: #333;
+    font-weight: 800;
+    font-size: 16px;
+    border: none;
+    margin: 0 0.5rem 0 0.5rem;
+}
+.panigations-active{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 16px;
+}
+.time-activity-result{
+    margin: 0 0 0 10px;
+}
+
+.salon-number{
+    margin: 0 0 1rem 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}

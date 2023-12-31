@@ -1,0 +1,16 @@
+.booking-detail__container{
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    background-color: #FFF;
+    width: 485px; 
+    height: 400px;
+    z-index: 3;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+.booking-detail__wraper{
+    width: 100%;
+    padding: 1rem;
+}

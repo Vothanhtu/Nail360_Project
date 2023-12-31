@@ -1,0 +1,148 @@
+
+.mary-patricia__container{
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    background-color: #FFF;
+    width: 500px; 
+    height: 623px;
+    z-index: 3;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+.mary-patricia__wraper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 11px;
+}
+.mary-patricia__container--header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.mary-patricia__container--header h2{
+    font-weight: 700;
+    font-size: 22px;
+    color: #333333;
+    margin-left: 1.2rem;
+}
+.name__service{
+    font-weight: 700;
+    font-size: 18px;
+}
+.close-popup__mary-patricia{
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 20px;
+    color: #333333;
+}
+/* CSS for datepicker */
+.datepicker-container, .timepicker-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+.timepicker-container{
+    margin-top: 2rem;
+}
+    .datepicker-container h2{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 10px;
+        color: #333333;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+.datepicker-content, .timepicker-content{
+    display: flex;
+    align-items: center;
+}
+    .timepicker-content{
+        width: 100%;
+        justify-content: space-between;
+    }
+.datepicker-items, .timepicker-items{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 68px;
+    cursor: pointer;
+}
+.date-item:first-child {
+    opacity: 0.4;
+  }
+  
+  .date-item:last-child {
+    opacity: 0.4;
+  }
+.btn-date--prev,.btn-date--next, .btn-time--prev, .btn-time--next{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #E8E8E8;
+}
+
+.selected-date{
+    border: 1px solid #682243;
+    width: 45px;
+    height: 66px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.hour-item{
+    width: 90px;
+    background-color: #F5F5F5;
+    padding: 10px 9px 10px 9px;
+    border-radius: 4px;  
+    height: 32px;  
+    color: #333333;
+    font-weight: 400;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.selected-hour{
+    background-color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFF;
+}
+.technician-container{
+    width: 100%;
+    padding-left: 2rem;
+}
+    .technician-container h4{
+        font-weight: 700;
+        font-size: 14px;
+        color: #333333;
+        text-align: left;
+    }
+.technician--name {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    row-gap: 1rem;
+    justify-items: start;
+  }
+
+.btn-save{
+    width: 162px;
+    height: 48px;
+    border-radius: 300px;
+    background-color: #D3427A;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 3rem;
+}
+

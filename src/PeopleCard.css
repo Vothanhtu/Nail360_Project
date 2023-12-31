@@ -1,0 +1,131 @@
+.btn-container__subtitle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .card{
+    max-height: 320px;
+    max-width: 280px;
+  }
+  .text-muted {
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  .people-card-btn {
+    background-color: #D3427A;
+    color: #ffff;
+    border-radius: 300px;
+    border: 1px;
+    padding: 4px 10px;
+    width: 110px;
+    height: 34px;
+    font-size: 13px;
+    font-family: "muli", sans-serif;
+  }
+  .people-image{
+    width: 280px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+
+  }
+  .people-avatar{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+  }
+  .avt-title{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0.5rem;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 18px;
+    flex: 2;
+  }
+  .container-cardbody{
+    display: flex
+  }
+  .card-body{
+    padding: 1rem 0.8rem 1rem 0.8rem !important;
+  }
+.row{
+    padding-bottom: 20px;
+}
+.card{
+    border-radius: 10px;
+}
+  .card-clicked {
+  border: 2px solid pink;
+  }
+  .card-text-justify{
+    text-align: justify;
+    height: 50px;
+    width: 100%;
+  }
+
+/* Fontsize */
+.fs-14px{
+    font-size: 14px;
+}
+
+/* Padding */
+
+@media screen and (min-width:768px) {
+    .px-md-5rem{
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+}
+@media screen and (max-width:767px) {
+    .px-sm-3rem{
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+}
+@media screen and (max-width:857px){
+  .people-card-btn{
+    font-size: 11px;
+  }
+  .card-subtitle{
+    font-size: 12px;
+    margin-top: 2px;
+    
+  }
+}
+@media screen and (max-width:576px) {
+    .px-2rem{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+/* Heart icon */
+
+.heart-icon{
+  position: absolute;
+  color: #3333 80%;
+  right: 10px;
+  top: 10px;
+}
+.title-small{
+  color: #D3427A;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+
+
+
+
+

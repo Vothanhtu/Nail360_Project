@@ -1,0 +1,11 @@
+.time-open, .time-closes {
+    margin: 0;
+    font-weight: 700;
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    size: 14px;
+}
+.time-open p, .time-closes p{
+    margin: 0;
+}

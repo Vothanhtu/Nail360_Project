@@ -1,0 +1,53 @@
+
+.image-container {
+    background-image: url("../public/bgbanner.svg"),url("../public/Banner2.svg");
+    background-position: left center, right center;
+    background-repeat: no-repeat, no-repeat;
+    height:  258px;
+    border-radius: 14px;
+    max-width: calc(1366px - 196px);
+    padding: 2.5rem 2.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-overlay {
+    color: white;
+} 
+    
+.text-overlay p{
+    max-width: 400px; 
+}    
+
+.btn-list{
+    background-color:#D3427A ;
+    color: #fff;
+    border-radius: 300px;
+    padding: 11px 53px;
+}
+@media screen and (max-width :567px ) {
+    .image-container {
+        background-image: url("../public/bgbanner.svg"),url("../public/Banner2.svg");
+        background-position: 100% center, 3rem center;
+        background-repeat: no-repeat, no-repeat;
+        height:  250px;
+    }
+    .text-overlay {
+        color: white;
+    } 
+    .text-overlay h1{
+        font-size: 1.2rem;
+    }
+    .text-overlay p{
+         font-size: 0.8rem;
+         text-align: justify;
+    }  
+    
+
+
+}
+
+
+
