@@ -3,7 +3,7 @@ Main responsibilities:
 Creating a website interface sales, programming using HTML, CSS, JavaScript, Bootstrap, ReactJs
 Collaborate with product team members to implement and develop new features.
 Collaborated with the UX/UI team to optimize the user interface, leading to a 20% reduction in bounce rate and an overall improvement in
-user satisfaction
+user satisfaction </br>
 Technical stacks : HTML5, CSS3, JavaScript, Bootstrap, React, PHP, JavaScript
 Achievements : Implemented a real-time calendar system for managing nail salon availability and ensuring accurate appointment
 scheduling.
