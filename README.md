@@ -11,15 +11,15 @@ Abilities : Experience with API integration and data exchange between the front-
 Link: https://github.com/Vothanhtu/Nail360_Project.git </br>
 
 SOME IMAGE ABOUT PROJECT </br>
-HOMEPAGE
-![homepage](https://github.com/Vothanhtu/Nail360_Project/assets/77402349/5668e6a3-3048-4365-9dbf-98a3d02acdeb)
-DETAIL SALON
-![detailSalon](https://github.com/Vothanhtu/Nail360_Project/assets/77402349/3403663b-10f7-41d2-a9e7-ecd9a73f4aa8)
-REVIEW SALON
-![reviewSalon](https://github.com/Vothanhtu/Nail360_Project/assets/77402349/684740b1-9a74-4c74-8898-55c258359517)
-SEARCH SALON RESULT
-![SearchSalonsResult](https://github.com/Vothanhtu/Nail360_Project/assets/77402349/89ef049a-a717-4000-9f66-aed4261ec853)
-404 NOT FOUND
+HOMEPAGE </br>
+![homepage](https://github.com/Vothanhtu/Nail360_Project/assets/77402349/5668e6a3-3048-4365-9dbf-98a3d02acdeb) </br>
+DETAIL SALON </br>
+![detailSalon](https://github.com/Vothanhtu/Nail360_Project/assets/77402349/3403663b-10f7-41d2-a9e7-ecd9a73f4aa8) </br>
+REVIEW SALON </br>
+![reviewSalon](https://github.com/Vothanhtu/Nail360_Project/assets/77402349/684740b1-9a74-4c74-8898-55c258359517) </br>
+SEARCH SALON RESULT </br>
+![SearchSalonsResult](https://github.com/Vothanhtu/Nail360_Project/assets/77402349/89ef049a-a717-4000-9f66-aed4261ec853) </br>
+404 NOT FOUND </br>
 ![404NotFound](https://github.com/Vothanhtu/Nail360_Project/assets/77402349/742932c2-0439-4719-a6a4-79fd94500329)
 
 
